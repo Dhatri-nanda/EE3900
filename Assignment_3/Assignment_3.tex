@@ -1,0 +1,237 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{setspace}
+\usepackage{gensymb}
+
+\singlespacing
+
+
+\usepackage[cmex10]{amsmath}
+
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+
+\usepackage{longtable}
+\usepackage{multirow}
+
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+\usepackage{float}
+
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+
+\DeclareMathOperator*{\Res}{Res}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{\vert#1\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{\lVert#1\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E[ #1 ]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{subsection}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+\renewcommand{\thefigure}{\theproblem}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{ASSIGNMENT 3}
+\author{Dhatri Nanda \\ AI20BTECH11002}
+\maketitle
+\newpage
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+Download all python codes from 
+\begin{lstlisting}
+https://github.com/Dhatri-nanda/EE3900/blob/main/Assignment_3/code.py
+\end{lstlisting}
+%
+and latex-tikz codes from 
+%
+\begin{lstlisting}
+https://github.com/Dhatri-nanda/EE3900/blob/main/Assignment_3/Assignment_3.tex
+\end{lstlisting}
+\section{Construction 2.9}
+Can you construct the quadrilateral PLAN if $PL = 6, LA = 9.5, \angle P = 75, \angle L = 150$ and $ \angle A = 140$ 
+%
+\section{SOLUTION}
+\begin{lemma}
+Given 
+\begin{align}
+    &PL = 6\\
+    &LA = 4.5\\
+    &\angle P = 75 \degree\\
+    &\angle L = 150 \degree\\
+    &\angle A = 140 \degree
+\end{align}
+Let
+\begin{align}
+        &\angle P=\theta \label{eq1}
+    \\
+    &\angle L=\alpha
+    \\
+    &\angle A=\delta \label{eq2}
+    \\
+    &\norm{\vec{L}-\vec{P}} =a, \label{eq3}
+    \\
+    &\norm{\vec{A}-\vec{L}} =b,\label{eq4}
+    \\
+ &\norm{\vec{A}-\vec{N}}=c
+ \\
+  &\norm{\vec{P}-\vec{N}} =d 
+  \\
+    &\norm{\vec{P}-\vec{A}} =e
+  \\
+  &\theta= \theta_1 + \theta_2
+  \\
+  & \delta_1=\angle NAP \\
+  & \delta_2= \angle LAP\\
+  & \gamma= \angle N
+\end{align}
+If three angles and two sides of a quadrilateral are known, then the coordinates of the vertices can be expressed as
+\begin{align}
+    \vec{A}=\vec{L}+b\times \myvec{\cos {(180\degree-\alpha)} \\ \sin{(180\degree - \alpha)}}\\
+    \vec{N}=d \myvec{\cos \theta \\ \sin \theta}
+\end{align}
+Where
+    \begin{align}
+    &d=e \times \brak{\frac{\sin\brak{{\delta-\sin^{-1}\sbrak{\sin{\alpha}\times \brak{\frac{b}{e}}}}}}{\sin\brak{{360\degree-(\alpha+\theta+\delta)}}}}\\
+   & e=\sqrt{a^2+b^2-2\times a \times b\cos{\alpha}}
+\end{align}
+\end{lemma}
+\begin{proof}
+Using angle sum rule of quadrilaterals
+\begin{align}
+\gamma=360\degree-(\alpha+\theta+\delta)
+\end{align}
+ Now, using cosine formula in $\triangle PLA$ we can find e:
+\begin{align}
+ e^2=
+a^2+b^2-2\times a \times b\cos{\alpha}
+\end{align}
+Using sine rule,
+\begin{align}
+    \frac{\sin{\alpha}}{e}=\frac{\sin{\delta_2}}{b}\\
+    \delta_2=\sin^{-1}\sbrak{\sin{\alpha}\times \brak{\frac{b}{e}}}\\
+\end{align}
+  Now in $\triangle MER$,
+  \begin{align}
+  \delta_1=\delta-\delta_2
+  \end{align}
+Using sine law of triangle,
+\begin{align}
+    \frac{\sin{\gamma}}{e}&=\frac{\sin{\delta_1}}{d}\\
+    \implies d&=e\times \brak{\frac{\sin{\delta_1}}{\sin{\gamma}}}
+\end{align}
+From the above equations, we get
+\begin{align}
+d=e \times \brak{\frac{\sin\brak{{\delta-\sin^{-1}\sbrak{\sin{\alpha}\times \brak{\frac{b}{e}}}}}}{\sin\brak{{360\degree-(\alpha+\theta+\delta)}}}}
+\end{align}
+where
+\begin{align}
+    e=\sqrt{a^2+b^2-2\times a \times b\cos{\alpha}}
+\end{align}
+\end{proof}
+   
+Calculating e 
+\begin{align}
+    e &= \sqrt{6^2 + 9.5^2 -2\times 6.5\times 9\times\cos{150}}\\
+    &\approx 15
+\end{align}
+ Calculating d
+ 
+ \begin{align}
+     d &= 15 \times \brak{\frac{\sin\brak{{140-\sin^{-1}\sbrak{\sin{150}\times \brak{\frac{9.5}{15}}}}}}{\sin\brak{{360\degree-(75+150+140)}}}}
+ \end{align}
+    Here, the denominator is $\sin\brak{{-5}}$, which is a negative value
+    
+    As d is a side of the quadrilateral, it cannot be negative, so we cannot construct the quadrilateral PLAN.
+\end{document}
