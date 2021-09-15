@@ -22,3 +22,4 @@ Prod = values[0]*values[1]
 print(Prod)
 
 #The quadratic equation if sum and product are given is A^2 - (sum)A + Prod
+#So, the characterisitic equation of the matrix is A^2 - A + 2I = 0
