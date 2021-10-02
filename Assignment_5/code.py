@@ -41,6 +41,7 @@ mu21 = (-m1.T@(V2@q11+u2)+ np.sqrt((m1.T@(V2@q11+u2))**2-(q11.T@V2@q11+2*u2.T@q1
 mu22 = (-m1.T@(V2@q21+u2)+ np.sqrt((m1.T@(V2@q21+u2))**2-(q21.T@V2@q21+2*u2.T@q21+f2)*(m1.T@V2@m1)))/((m1.T)@V2@m1)
 print("M2 = ",q11 + mu21*m1)
 print("K2 = ",q21 + mu22*m1)
+eta = -0.5
 
 #final intersections
 M = q11 + mu21*m1
@@ -51,15 +52,15 @@ fig = plt.figure()
 ax = fig.add_subplot(111, aspect='equal')
 
 #x^2 = 4y using affine transformations
-len = 100
-x = np.linspace(-6,6,len)
+len = 1000
+x1 = np.linspace(-6,6,len)
 D_vec1, P1 = linalg.eig(V1)
 
 D1 = np.diag(D_vec1)
 eta1 = u1.T@P1[:,1]
 foc1 = -(2*eta)/D_vec1[0]
-x_para = (x**2/foc1)/4
-xStandardparab = np.vstack((x,x_para))
+x_para = (x1**2/foc1)/4
+xStandardparab = np.vstack((x1,x_para))
 
 #y^2 = 4ax using affine transformations
 y=np.linspace(-6,6,len)
